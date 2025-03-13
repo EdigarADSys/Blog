@@ -1,0 +1,86 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1a1a1a, #282828); /* Gradiente de fundo escuro sutil */
+    color: #e0e0e0;
+}
+
+.chatbot-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    background: linear-gradient(135deg, #222, #333); /* Gradiente escuro para o container */
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chatbot-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Sombra suave ao passar o mouse */
+}
+
+.chatbot-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ccc; /* Cor sóbria para o título */
+}
+
+#resposta {
+    background: linear-gradient(135deg, #333, #444); /* Gradiente escuro para a área de resposta */
+    border: 1px solid #555;
+    padding: 20px;
+    margin-bottom: 25px;
+    min-height: 150px;
+    border-radius: 10px;
+    line-height: 1.7;
+    word-wrap: break-word;
+    font-size: 19px;
+    text-align: center;
+    color: #ddd; /* Cor sóbria para o texto da resposta */
+}
+
+#perguntas-predefinidas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#perguntas-predefinidas button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #444, #555); /* Gradiente escuro para os botões */
+    border: 1px solid #666;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #bbb; /* Cor sóbria para o texto dos botões */
+    font-size: 15px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave nos botões */
+}
+
+#perguntas-predefinidas button:hover {
+    background: linear-gradient(135deg, #555, #666);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra suave ao passar o mouse nos botões */
+}
+
+@media (max-width: 600px) {
+    .chatbot-container {
+        padding: 20px;
+    }
+
+    #perguntas-predefinidas button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
